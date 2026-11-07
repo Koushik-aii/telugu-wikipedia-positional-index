@@ -1,0 +1,245 @@
+============================================================
+TELUGU POSITIONAL INVERTED INDEX - OUTPUT REPORT
+============================================================
+
+Total Documents Indexed: 10000
+Vocabulary Size: 271758
+Total Tokens: 4744750
+Average Document Length: 474.48
+
+============================================================
+SECTION A: TEN RARE TELUGU TERMS WITH POSITIONAL INDEXES
+============================================================
+
+==========================================
+RARE TERM 1
+==========================================
+
+Term: అంకానికి
+
+Collection Frequency: 2
+Document Frequency: 1
+
+Document ID: 10275
+Document Title: కొడవటిగంటి రోహిణీప్రసాద్
+Positions: [121, 389]
+
+
+==========================================
+RARE TERM 2
+==========================================
+
+Term: అంకితమిచ్చెను
+
+Collection Frequency: 2
+Document Frequency: 1
+
+Document ID: 1539
+Document Title: ఉదయగిరి
+Positions: [347, 370]
+
+
+==========================================
+RARE TERM 3
+==========================================
+
+Term: అంకుషావలి
+
+Collection Frequency: 2
+Document Frequency: 1
+
+Document ID: 18110
+Document Title: బిజిగిర్‌షరేఫ్
+Positions: [697, 759]
+
+
+==========================================
+RARE TERM 4
+==========================================
+
+Term: అంకెలలో
+
+Collection Frequency: 2
+Document Frequency: 1
+
+Document ID: 3506
+Document Title: భారతీయ సంఖ్యామానం
+Positions: [296, 314]
+
+
+==========================================
+RARE TERM 5
+==========================================
+
+Term: అంక్సాపూర్
+
+Collection Frequency: 2
+Document Frequency: 1
+
+Document ID: 15484
+Document Title: అంక్సాపూర్
+Positions: [1, 675]
+
+
+==========================================
+RARE TERM 6
+==========================================
+
+Term: అంఖియో
+
+Collection Frequency: 2
+Document Frequency: 1
+
+Document ID: 2514
+Document Title: లతా మంగేష్కర్
+Positions: [2440, 2442]
+
+
+==========================================
+RARE TERM 7
+==========================================
+
+Term: అంగంలోని
+
+Collection Frequency: 2
+Document Frequency: 1
+
+Document ID: 9783
+Document Title: మంగళంపల్లి బాలమురళీకృష్ణ
+Positions: [1281, 1303]
+
+
+==========================================
+RARE TERM 8
+==========================================
+
+Term: అంగదాది
+
+Collection Frequency: 2
+Document Frequency: 1
+
+Document ID: 12668
+Document Title: యుద్ధకాండ
+Positions: [2337, 3061]
+
+
+==========================================
+RARE TERM 9
+==========================================
+
+Term: అంగనమలకొత్తూరు
+
+Collection Frequency: 2
+Document Frequency: 1
+
+Document ID: 16766
+Document Title: అంగనమలకొత్తూరు
+Positions: [1, 552]
+
+
+==========================================
+RARE TERM 10
+==========================================
+
+Term: అంగలూరులోని
+
+Collection Frequency: 2
+Document Frequency: 1
+
+Document ID: 6741
+Document Title: అంగలూరు (గుడ్లవల్లేరు మండలం)
+Positions: [487, 985]
+
+
+============================================================
+SECTION B: FIVE TEST CASES
+============================================================
+
+------------------------------------------
+TEST CASE 1: Single-Term Lookup
+------------------------------------------
+
+Query: తెలుగు
+Expected Behavior: Term should be found with its CF, DF, and positions
+
+Actual Result:
+  Term: తెలుగు
+  CF: 6424
+  DF: 3222
+  Document 10085: [194, 212, 220, 285]
+  Document 10099: [8, 27, 427]
+  Document 10129: [6, 70]
+  Document 10161: [172, 179, 196]
+  Document 10174: [35]
+  ... and 3217 more documents
+
+Status: PASS
+
+------------------------------------------
+TEST CASE 2: Rare-Term Lookup
+------------------------------------------
+
+Query: అంకానికి
+Expected Behavior: Rare term should be found with low DF
+
+Actual Result:
+  Term: అంకానికి
+  CF: 2
+  DF: 1
+  Document 10275: [121, 389]
+
+Status: PASS
+
+------------------------------------------
+TEST CASE 3: Repeated-Term Positions
+------------------------------------------
+
+Query: అంకంపల్లెలో
+Expected Behavior: Term should appear multiple times in at least one document
+
+Actual Result:
+  Term: అంకంపల్లెలో
+  Document ID: 15028
+  Positions: [139, 263, 529, 578, 592]
+  Occurrences in this document: 5
+
+Status: PASS
+
+------------------------------------------
+TEST CASE 4: Exact Phrase Search
+------------------------------------------
+
+Query: "తెలుగు భాష"
+Expected Behavior: Phrase should be found using positional index
+
+Actual Result:
+  Phrase "తెలుగు భాష" matched in 42 document(s):
+  Document ID: 11331 (చూపులు కలిసిన శుభవేళ)
+  Phrase starts at positions: [256]
+  Document ID: 11355 (భాస్కర శతకము)
+  Phrase starts at positions: [248]
+  Document ID: 1152 (శ్రీశ్రీ)
+  Phrase starts at positions: [1480]
+  Document ID: 12314 (సిరిపురం మొనగాడు)
+  Phrase starts at positions: [9]
+  Document ID: 12964 (జమదగ్ని (సినిమా))
+  Phrase starts at positions: [8]
+  ... and 37 more matching documents
+
+Status: PASS
+
+------------------------------------------
+TEST CASE 5: Unknown-Term Lookup
+------------------------------------------
+
+Query: క్వాంటమ్ఫిజిక్స్అణుశక్తి
+Expected Behavior: Term should NOT be found in vocabulary
+
+Actual Result:
+  Term 'క్వాంటమ్ఫిజిక్స్అణుశక్తి' not found in vocabulary.
+
+Status: PASS
+
+============================================================
+END OF OUTPUT REPORT
+============================================================

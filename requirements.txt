@@ -1,0 +1,16 @@
+# No external dependencies required.
+# This project uses only Python standard library modules:
+# - bz2
+# - xml.etree.ElementTree
+# - re
+# - unicodedata
+# - json
+# - os
+# - sys
+# - sqlite3
+# - tempfile
+# - argparse
+# - unittest
+# - zipfile
+# - urllib.request
+

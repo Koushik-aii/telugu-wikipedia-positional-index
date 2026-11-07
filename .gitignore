@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Data directories (Telugu Wikipedia dump and generated indexes)
+data/raw/
+data/index/
+_temp_index.db
+
+# Submission ZIP files
+*.zip
+
+# VS Code / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.log
